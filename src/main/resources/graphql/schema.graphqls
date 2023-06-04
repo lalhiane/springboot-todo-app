@@ -1,0 +1,81 @@
+type Todo {
+  id: ID!
+
+  title: String!
+
+  createdDate: String!
+
+  userId: ID!
+}
+
+type TodoDto {
+  id: ID!
+
+  title: String!
+
+  createdDate: String!
+
+  userId: ID!
+}
+
+enum Role {
+  USER
+
+  ADMIN
+}
+
+type User {
+  id: ID!
+
+  firstName: String!
+
+  lastName: String!
+
+  email: String!
+
+  password: String!
+
+  role: Role!
+}
+
+type AuthenticationResponse {
+  token: String!
+}
+
+input TodoInput {
+  title: String!
+}
+
+input RegisterRequest {
+  firstName: String!
+
+  lastName: String!
+
+  email: String!
+
+  password: String!
+}
+
+input AuthenticationRequest {
+  email: String!
+
+  password: String!
+}
+
+type Query {
+  findAllTodos: [Todo]!
+
+  findTodoById(id: ID): TodoDto
+
+  findTodoByTitle(title: String): TodoDto
+}
+
+type Mutation {
+  saveTodo(input: TodoInput): TodoDto
+
+  deleteTodoById(id: ID): ID
+
+  register(input: RegisterRequest): AuthenticationResponse
+
+  authenticate(input: AuthenticationRequest): AuthenticationResponse
+}
