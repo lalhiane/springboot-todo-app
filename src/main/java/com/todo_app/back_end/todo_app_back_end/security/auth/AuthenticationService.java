@@ -9,9 +9,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.todo_app.back_end.todo_app_back_end.Exceptions.ConflictException;
+
 import com.todo_app.back_end.todo_app_back_end.security.config.JwtService;
+
 import com.todo_app.back_end.todo_app_back_end.security.models.Role;
+
 import com.todo_app.back_end.todo_app_back_end.security.models.User;
+
 import com.todo_app.back_end.todo_app_back_end.security.models.UserRepo;
 
 import lombok.RequiredArgsConstructor;

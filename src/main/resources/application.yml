@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3305/todo_app_api
+    username: root
+    password: lalhiane_1899
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  graphql:
+    schema:
+      printer:
+        enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+graphql:
+  servlet:
+    exception-handlers-enabled: true
+    mapping: /graphql
+    enabled: true
+    corsEnabled: false

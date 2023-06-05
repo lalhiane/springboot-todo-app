@@ -1,6 +1,7 @@
 package com.todo_app.back_end.todo_app_back_end.security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.Bean;
 
 import org.springframework.context.annotation.Configuration;

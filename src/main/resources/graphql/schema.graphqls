@@ -75,7 +75,7 @@ type Mutation {
 
   deleteTodoById(id: ID): ID
 
-  register(input: RegisterRequest): AuthenticationResponse
+  register(input: RegisterRequest!): AuthenticationResponse
 
   authenticate(input: AuthenticationRequest): AuthenticationResponse
 }

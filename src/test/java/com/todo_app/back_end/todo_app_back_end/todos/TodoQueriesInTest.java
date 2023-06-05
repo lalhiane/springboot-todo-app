@@ -8,10 +8,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+// import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+// import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -25,7 +25,10 @@ public class TodoQueriesInTest {
     @Test
     public void listTodos() throws Exception {
 
-        String expectedResponse = "{\"data\": {\"findAllTodos\": [{\"id\": \"4\",\"title\": \"Todo 1 For Aicha\",\"createdDate\": \"2023-06-03 22:22:35.017\",\"userId\": \"2\"},{\"id\": \"5\",\"title\": \"Todo 2 For Aicha\",\"createdDate\": \"2023-06-03 22:22:39.042\",\"userId\": \"2\"}]}}";
+        // String expectedResponse = "{\"data\": {\"findAllTodos\": [{\"id\":
+        // \"4\",\"title\": \"Todo 1 For Aicha\",\"createdDate\": \"2023-06-03
+        // 22:22:35.017\",\"userId\": \"2\"},{\"id\": \"5\",\"title\": \"Todo 2 For
+        // Aicha\",\"createdDate\": \"2023-06-03 22:22:39.042\",\"userId\": \"2\"}]}}";
 
         mockMvc.perform(post("/graphql")
 
